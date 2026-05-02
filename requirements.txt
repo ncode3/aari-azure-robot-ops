@@ -1,0 +1,4 @@
+azure-iot-device>=2.14.0,<3.0.0
+azure-storage-blob>=12.20.0,<13.0.0
+python-dotenv>=1.0.0,<2.0.0
+psutil>=5.9.8,<6.0.0

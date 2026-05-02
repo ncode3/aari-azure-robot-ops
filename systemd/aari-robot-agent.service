@@ -1,0 +1,18 @@
+[Unit]
+Description=AARI Azure Robot Telemetry Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__AARI_USER__
+WorkingDirectory=__AARI_REPO_ROOT__
+EnvironmentFile=__AARI_REPO_ROOT__/.env
+ExecStart=__AARI_REPO_ROOT__/.venv/bin/python __AARI_REPO_ROOT__/src/agent.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
